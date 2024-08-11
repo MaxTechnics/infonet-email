@@ -1,154 +1,170 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Simple Transactional Email</title>
-    <style media="all" type="text/css">
-@media all {
-  .btn-primary table td:hover {
-    background-color: #ec0867 !important;
-  }
 
-  .btn-primary a:hover {
-    background-color: #ec0867 !important;
-    border-color: #ec0867 !important;
-  }
-}
-@media only screen and (max-width: 640px) {
-  .main p,
-.main td,
-.main span {
-    font-size: 16px !important;
-  }
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Simple Transactional Email</title>
+  <style media="all" type="text/css">
+    @media only screen and (max-width: 640px) {
 
-  .wrapper {
-    padding: 8px !important;
-  }
+      .main p,
+      .main td,
+      .main span {
+        font-size: 16px !important;
+      }
 
-  .content {
-    padding: 0 !important;
-  }
+      .wrapper {
+        padding: 8px !important;
+      }
 
-  .container {
-    padding: 0 !important;
-    padding-top: 8px !important;
-    width: 100% !important;
-  }
+      .content {
+        padding: 0 !important;
+      }
 
-  .main {
-    border-left-width: 0 !important;
-    border-radius: 0 !important;
-    border-right-width: 0 !important;
-  }
+      .container {
+        padding: 0 !important;
+        padding-top: 8px !important;
+        width: 100% !important;
+      }
 
-  .btn table {
-    max-width: 100% !important;
-    width: 100% !important;
-  }
+      .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important;
+      }
 
-  .btn a {
-    font-size: 16px !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-}
-@media all {
-  .ExternalClass {
-    width: 100%;
-  }
+      .btn table {
+        max-width: 100% !important;
+        width: 100% !important;
+      }
 
-  .ExternalClass,
-.ExternalClass p,
-.ExternalClass span,
-.ExternalClass font,
-.ExternalClass td,
-.ExternalClass div {
-    line-height: 100%;
-  }
+      .btn a {
+        font-size: 16px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+    }
 
-  .apple-link a {
-    color: inherit !important;
-    font-family: inherit !important;
-    font-size: inherit !important;
-    font-weight: inherit !important;
-    line-height: inherit !important;
-    text-decoration: none !important;
-  }
+    @media all {
+      .ExternalClass {
+        width: 100%;
+      }
 
-  #MessageViewBody a {
-    color: inherit;
-    text-decoration: none;
-    font-size: inherit;
-    font-family: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-  }
-}
-</style>
-  </head>
-  <body style="font-family: Helvetica, sans-serif; -webkit-font-smoothing: antialiased; font-size: 16px; line-height: 1.3; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #f4f5f6; margin: 0; padding: 0;">
-    <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f4f5f6; width: 100%;" width="100%" bgcolor="#f4f5f6">
-      <tr>
-        <td style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top;" valign="top">&nbsp;</td>
-        <td class="container" style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; max-width: 600px; padding: 0; padding-top: 24px; width: 600px; margin: 0 auto;" width="600" valign="top">
-          <div class="content" style="box-sizing: border-box; display: block; margin: 0 auto; max-width: 600px; padding: 0;">
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
 
-            <!-- START CENTERED WHITE CONTAINER -->
-            <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">This is preheader text. Some clients will show this text as a preview.</span>
-            <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background: #ffffff; border: 1px solid #eaebed; border-radius: 16px; width: 100%;" width="100%">
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
+      }
 
-              <!-- START MAIN CONTENT AREA -->
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+    }
+  </style>
+</head>
+
+<body style="font-family: Helvetica, sans-serif; -webkit-font-smoothing: antialiased; font-size: 16px; line-height: 1.3; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; background-color: #f4f5f6; margin: 0; padding: 0;">
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #f4f5f6; width: 100%;" width="100%" bgcolor="#f4f5f6">
+    <tr>
+      <td style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top;" valign="top">&nbsp;</td>
+      <td class="container" style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; max-width: 600px; padding: 0; padding-top: 24px; width: 600px; margin: 0 auto;" width="600" valign="top">
+        <div class="content" style="box-sizing: border-box; display: block; margin: 0 auto; max-width: 600px; padding: 0;">
+
+          <!-- START CENTERED WHITE CONTAINER -->
+          <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">Open it, I know you need to</span>
+          <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background: #ffffff; border: 1px solid #eaebed; border-radius: 16px; width: 100%;" width="100%">
+
+            <!-- START MAIN CONTENT AREA -->
+            <tr>
+              <td class="wrapper" style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; box-sizing: border-box; padding: 24px;" valign="top">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="941.5px" height="161.5px" viewbox="0 0 941.5 161.5" enable-background="new 0 0 941.5 161.5" xml:space="preserve" style="height: 30px; width: 150px; margin-bottom: 16px;">
+                  <path fill="#00be84" d="M19.189,1.821c-11.28,0-19.2,8.64-19.2,19.92V139.58c0,11.28,7.92,19.92,19.2,19.92c11.28,0,19.2-8.64,19.2-19.92V21.741
+	C38.388,10.461,30.469,1.821,19.189,1.821z" />
+                  <path fill="#00be84" d="M179.988,1.821c-11.28,0-19.2,8.64-19.2,19.92v69.12l-62.639-80.16c-4.8-5.76-9.36-8.88-16.32-8.88
+	c-11.28,0-19.2,8.64-19.2,19.92V139.58c0,11.28,7.92,19.92,19.2,19.92c11.28,0,19.2-8.64,19.2-19.92V73.341l63.839,79.439
+	c3.6,4.32,8.64,6.72,15.12,6.72c11.28,0,19.2-8.64,19.2-19.92V21.741C199.188,10.461,191.268,1.821,179.988,1.821z" />
+                  <path fill="#00be84" d="M307.187,1.821h-65.76c-11.28,0-19.2,8.64-19.2,19.92V139.58c0,11.28,7.92,19.92,19.2,19.92s19.2-8.64,19.2-19.92V38.061
+	h46.56c11.28,0,19.2-7.2,19.2-18C326.386,9.501,318.466,1.821,307.187,1.821z M296.146,66.861h-7.2c-11.28,0-19.2,7.2-19.2,18.24
+	c0,11.28,7.92,18.24,19.2,18.24h7.2c11.52,0,19.44-6.96,19.44-18.24C315.586,74.061,307.667,66.861,296.146,66.861z" />
+                  <path fill="#00be84" d="M413.984,161.42c47.52,0,81.359-33.359,81.359-80.399c0-47.279-34.08-81.119-81.359-81.119
+	c-47.279,0-81.359,33.84-81.359,81.119C332.625,128.061,366.705,161.42,413.984,161.42z M413.984,124.94
+	c-25.439,0-42.479-18.48-42.479-43.92c0-25.68,17.04-44.64,42.479-44.64c25.68,0,42.479,18.96,42.479,44.64
+	C456.464,106.46,439.664,124.94,413.984,124.94z M413.984,93.98c7.92,0,13.44-5.76,13.44-13.2s-5.52-13.2-13.44-13.2
+	c-7.68,0-13.2,5.76-13.2,13.2S406.305,93.98,413.984,93.98z" />
+                  <path fill="#00be84" d="M632.862,1.821c-11.28,0-19.2,8.64-19.2,19.92v69.12l-62.639-80.16c-4.8-5.76-9.36-8.88-16.32-8.88
+	c-11.28,0-19.2,8.64-19.2,19.92V139.58c0,11.28,7.92,19.92,19.2,19.92c11.28,0,19.2-8.64,19.2-19.92V73.341l63.839,79.439
+	c3.6,4.32,8.64,6.72,15.12,6.72c11.28,0,19.2-8.64,19.2-19.92V21.741C652.062,10.461,644.143,1.821,632.862,1.821z" />
+                  <path fill="#00be84" d="M766.061,123.26h-53.04V38.061h51.84c11.28,0,19.2-7.44,19.2-18c0-10.8-7.92-18.24-19.2-18.24h-70.56
+	c-11.28,0-19.2,8.64-19.2,19.92V139.58c0,11.28,7.92,19.92,19.2,19.92h71.759c11.28,0,19.2-7.44,19.2-18
+	C785.261,130.7,777.341,123.26,766.061,123.26z M755.501,62.781h-15.36c-10.32,0-18,6.48-18,16.8s7.68,17.04,18,17.04h15.36
+	c10.32,0,18-6.72,18-17.04S765.821,62.781,755.501,62.781z" />
+                  <path fill="#00be84" d="M829.9,1.821h-12.24c-11.28,0-19.2,7.92-19.2,18.24s7.92,18,19.2,18h14.88c12.24,0,18.24,3.6,18.24,22.32v79.199
+	c0,11.28,7.92,19.92,19.2,19.92c11.28,0,19.2-8.64,19.2-19.92V57.981C889.18,16.941,865.899,1.821,829.9,1.821z M922.539,1.821
+	h-15.12c-11.04,0-19.2,7.92-19.2,18.24s8.16,18,19.2,18h15.12c11.04,0,19.2-7.68,19.2-18S933.579,1.821,922.539,1.821z" />
+                </svg>
+
+                <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">Hi there</p>
+                <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">You're gonna need to do something here, maybe click a button to activate your account or something idk...</p>
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; box-sizing: border-box; width: 100%; min-width: 100%;" width="100%">
+                  <tbody>
+                    <tr>
+                      <td align="left" style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; padding-bottom: 16px;" valign="top">
+                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
+                          <tbody>
+                            <tr>
+                              <td style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; border-radius: 4px; text-align: center; background-color: #00be84;" valign="top" align="center" bgcolor="#00be84"><a href="http://htmlemail.io" target="_blank" style="display: inline-block; position: relative; margin: 0; border: 0; outline: 0; padding: 0px 15px; font-size: 16px; font-weight: 400; line-height: 40px; height: 40px; text-align: center; white-space: nowrap; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; border-radius: 0.5rem; width: auto; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-decoration: none; text-transform: capitalize; background-color: #00be84; border-color: #00be84; color: #ffffff;">Do a thing</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">If anything goes titts up well you know where to reach us</p>
+                <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">Peace!</p>
+              </td>
+            </tr>
+
+            <!-- END MAIN CONTENT AREA -->
+          </table>
+
+          <!-- START FOOTER -->
+          <div class="footer" style="clear: both; padding-top: 24px; text-align: center; width: 100%;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
               <tr>
-                <td class="wrapper" style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; box-sizing: border-box; padding: 24px;" valign="top">
-                  <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">Hi there</p>
-                  <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">Sometimes you just want to send a simple HTML email with a simple design and clear call to action. This is it.</p>
-                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; box-sizing: border-box; width: 100%; min-width: 100%;" width="100%">
-                    <tbody>
-                      <tr>
-                        <td align="left" style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; padding-bottom: 16px;" valign="top">
-                          <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
-                            <tbody>
-                              <tr>
-                                <td style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top; border-radius: 4px; text-align: center; background-color: #0867ec;" valign="top" align="center" bgcolor="#0867ec"> <a href="http://htmlemail.io" target="_blank" style="border: solid 2px #0867ec; border-radius: 4px; box-sizing: border-box; cursor: pointer; display: inline-block; font-size: 16px; font-weight: bold; margin: 0; padding: 12px 24px; text-decoration: none; text-transform: capitalize; background-color: #0867ec; border-color: #0867ec; color: #ffffff;">Call To Action</a> </td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">This is a really simple email template. It's sole purpose is to get the recipient to click the button with no distractions.</p>
-                  <p style="font-family: Helvetica, sans-serif; font-size: 16px; font-weight: normal; margin: 0; margin-bottom: 16px;">Good luck! Hope it works.</p>
+                <td class="content-block" style="font-family: Helvetica, sans-serif; vertical-align: top; color: #9a9ea6; font-size: 16px; text-align: center;" valign="top" align="center">
+                  <span class="apple-link" style="color: #9a9ea6; font-size: 16px; text-align: center;">Infonet by ITscape</span>
                 </td>
               </tr>
+            </table>
+          </div>
 
-              <!-- END MAIN CONTENT AREA -->
-              </table>
+          <!-- END FOOTER -->
 
-            <!-- START FOOTER -->
-            <div class="footer" style="clear: both; padding-top: 24px; text-align: center; width: 100%;">
-              <table role="presentation" border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;" width="100%">
-                <tr>
-                  <td class="content-block" style="font-family: Helvetica, sans-serif; vertical-align: top; color: #9a9ea6; font-size: 16px; text-align: center;" valign="top" align="center">
-                    <span class="apple-link" style="color: #9a9ea6; font-size: 16px; text-align: center;">Company Inc, 7-11 Commercial Ct, Belfast BT1 2NB</span>
-                    <br> Don't like these emails? <a href="http://htmlemail.io/blog" style="text-decoration: underline; color: #9a9ea6; font-size: 16px; text-align: center;">Unsubscribe</a>.
-                  </td>
-                </tr>
-                <tr>
-                  <td class="content-block powered-by" style="font-family: Helvetica, sans-serif; vertical-align: top; color: #9a9ea6; font-size: 16px; text-align: center;" valign="top" align="center">
-                    Powered by <a href="http://htmlemail.io" style="color: #9a9ea6; font-size: 16px; text-align: center; text-decoration: none;">HTMLemail.io</a>
-                  </td>
-                </tr>
-              </table>
-            </div>
+          <!-- END CENTERED WHITE CONTAINER -->
+        </div>
+      </td>
+      <td style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top;" valign="top">&nbsp;</td>
+    </tr>
+  </table>
+</body>
 
-            <!-- END FOOTER -->
-            
-<!-- END CENTERED WHITE CONTAINER --></div>
-        </td>
-        <td style="font-family: Helvetica, sans-serif; font-size: 16px; vertical-align: top;" valign="top">&nbsp;</td>
-      </tr>
-    </table>
-  </body>
 </html>
